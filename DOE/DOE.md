@@ -1,8 +1,11 @@
 # Design-of-experiment (DOE) matrix generator for engineering and statistics
-### Copyright Notice
-Copyright (c) <2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086> 
-
 <p align="center"><img width="400" height="350" src="https://www.tonex.com/wp-content/uploads/logo_DoE_RGB.jpg"></p>
+
+### Copyright Notice and Code repository
+Copyright (c) <2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086> 
+It uses a MIT License, so although I retain the copyright of this particular code, please feel free to exercise your rights of the free software by using and enhancing it.
+
+Please get the codebase from [here](https://github.com/tirthajyoti/Design-of-experiment-Python).
 
 ## Features
 This set of codes is a collection of functions which wrap around the core packages (mentioned below) and generate **design-of-experiment (DOE) matrices** for a statistician or engineer from an arbitrary range of input variables.
