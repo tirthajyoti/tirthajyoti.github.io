@@ -3,6 +3,7 @@
 
 ### Copyright Notice and Code repository
 Copyright (c) <2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086> 
+
 It uses a MIT License, so although I retain the copyright of this particular code, please feel free to exercise your rights of the free software by using and enhancing it.
 
 Please get the codebase from [here](https://github.com/tirthajyoti/Design-of-experiment-Python).
@@ -111,7 +112,7 @@ Pressure | Temperature | FlowRate | Time
 
 ### Central-composite design
 <p align="center"><img width="400" height="150" src="http://www.ece.northwestern.edu/local-apps/matlabhelp/toolbox/stats/doe_cc.gif"></p>
-A Box-Wilson Central Composite Design, commonly called 'a central composite design,' contains an imbedded factorial or fractional factorial design with center points that is augmented with a group of 'star points' that allow estimation of curvature. One central composite design consists of cube points at the corners of a unit cube that is the product of the intervals [-1,1], star points along the axes at or outside the cube, and center points at the origin. Central composite designs are of three types. Circumscribed (CCC) designs are as described above. Inscribed (CCI) designs are as described above, but scaled so the star points take the values -1 and +1, and the cube points lie in the interior of the cube. Faced (CCF) designs have the star points on the faces of the cube. Faced designs have three levels per factor, in contrast with the other types that have five levels per factor. The following figure shows these three types of designs for three factors. [Read this page] (https://www.itl.nist.gov/div898/handbook/pri/section3/pri3361.htm) for more information about this kind of design philosophy.
+A Box-Wilson Central Composite Design, commonly called 'a central composite design,' contains an imbedded factorial or fractional factorial design with center points that is augmented with a group of 'star points' that allow estimation of curvature. One central composite design consists of cube points at the corners of a unit cube that is the product of the intervals [-1,1], star points along the axes at or outside the cube, and center points at the origin. Central composite designs are of three types. Circumscribed (CCC) designs are as described above. Inscribed (CCI) designs are as described above, but scaled so the star points take the values -1 and +1, and the cube points lie in the interior of the cube. Faced (CCF) designs have the star points on the faces of the cube. Faced designs have three levels per factor, in contrast with the other types that have five levels per factor. The following figure shows these three types of designs for three factors. [Read this page] (http://blog.minitab.com/blog/understanding-statistics/getting-started-with-factorial-design-of-experiments-doe) for more information about this kind of design philosophy.
 
 ### Latin Hypercube design
 <p align="center"><img width="400" height="350" src="http://sumo.intec.ugent.be/sites/sumo/files//sed_3d.png"></p>
