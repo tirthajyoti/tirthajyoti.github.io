@@ -35,7 +35,7 @@ Both the core packages, which act as foundations to this repo, are not complete 
 
 ## How to use it?
 ### How to use and what supporitng packages are required?
-Note this is just a code repository and not a installer package. For the time being, please clone this repo, store all the files in a local directory and start using the software by simply typing,
+Note this is just a code repository and not a installer package. For the time being, please clone [this repo from GitHub](https://github.com/tirthajyoti/Design-of-experiment-Python), store all the files in a local directory and start using the software by simply typing,
 
 ``python Main.py``
 
