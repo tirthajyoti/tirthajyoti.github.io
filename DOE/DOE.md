@@ -34,14 +34,8 @@ Both the core packages, which act as foundations to this repo, are not complete 
 * Uniform random matrix
 
 ## How to use it?
-### How to use and what supporitng packages are required?
-Note this is just a code repository and not a installer package. For the time being, please clone [this repo from GitHub](https://github.com/tirthajyoti/Design-of-experiment-Python), store all the files in a local directory and start using the software by simply typing,
-
-``python Main.py``
-
-After this, a simple menu will be printed on the screen and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables). **You should use the supplied generic CSV file as an example.** Please put the factors in the columns and the levels in the row (not the other way around).
-
-Before that, however, make sure you have all the necessary packages installed. You can simply run the .bash (Unix/Linux) and .bat (Windows) files provided in the repo, to install those packages from your command line interface. They contain the following commands,
+### What supporitng packages are required?
+First make sure you have all the necessary packages installed. You can simply run the .bash (Unix/Linux) and .bat (Windows) files provided in the repo, to install those packages from your command line interface. They contain the following commands,
 
 ```
 pip install numpy
@@ -50,6 +44,17 @@ pip install matplotlib
 pip install pydoe
 pip install diversipy
 ```
+### Eratta for using PyDOE
+Please note that as installed, PyDOE will throw some error related to type conversion. There are two options
+* I have modified the pyDOE code suitably and included a file with re-written functions in the repo. This is the file called by the program while executing, so you should see no error.
+* If you encounter any error, you could try to modify the PyDOE code by going to the folder where pyDOE files are copied and copying the two files `doe_factorial.py` and `doe_box_behnken.py` supplied with this repo.
+
+### How to use it?
+Note this is just a code repository and not a installer package. For the time being, please clone [this repo from GitHub](https://github.com/tirthajyoti/Design-of-experiment-Python), store all the files in a local directory and start using the software by simply typing,
+
+``python Main.py``
+
+After this, a simple menu will be printed on the screen and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables). **You should use the supplied generic CSV file as an example.** Please put the factors in the columns and the levels in the row (not the other way around).
 
 Also, **you must have an input parameters CSV file stored in the same directory** that you are running this code from. Couple of example CSV files are provided in the repo. Feel free to modify them as per your needs.
 
