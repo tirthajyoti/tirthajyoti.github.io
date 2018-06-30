@@ -2,7 +2,7 @@
 <p align="center"><img width="400" height="350" src="https://www.tonex.com/wp-content/uploads/logo_DoE_RGB.jpg"></p>
 
 ### Copyright Notice and Code repository
-Copyright (c) <2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086> 
+***Copyright (c): 2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086*** 
 
 It uses a MIT License, so although I retain the copyright of this particular code, please feel free to exercise your rights of the free software by using and enhancing it.
 
