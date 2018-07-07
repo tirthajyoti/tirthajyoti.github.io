@@ -24,4 +24,4 @@ Following features are currently implemented.
 
 Here is a screenshot of the execution window,
 
-<p align="center"><img width="600" height="500" src="http://github.com/tirthajyoti/tirthajyoti.github.io/blob/master/Images/UCI_ML_SC_1.PNG"></p>
+<p align="center"><img width="600" height="500" src="https://imgur.com/lj2eTQQ"></p>
