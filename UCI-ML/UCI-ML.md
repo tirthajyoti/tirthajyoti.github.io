@@ -15,10 +15,20 @@ UCI ML portal is a wonderful gift to ML practioners. That said, navigating the p
 This is a MIT-licensed Open-source Python 3.6 codebase which offers functions and methods to allow an user play with the UCI ML datasets in an interactive manner. Download/clone/fork the codebase from my Github page here.
 
 ### Required packages
-Only simple widely used Python packages are required to run this code.
+Only simple widely used Python packages are required to run this code. For easy installation of these supporting packages, setup.bash and setup.bat files are included in my repo. Just execute them in your Linux/Windows shell and you are ready!
 * [Pandas](https://pandas.pydata.org/)
 * [Beautifulsoup 4](https://www.crummy.com/software/BeautifulSoup/?)
 * [Requests](http://docs.python-requests.org/en/master/)
+
+### How to run it?
+Just download/clone the Gitgub repo, make sure to have the supporting packages installed and run the following command at your terminal.
+
+**`python Main.py`**
+
+A menu will open up allowing you to perform various tasks. 
+Here is a screenshot of the menu,
+
+![Menu](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/UCI_ML_SC_1.PNG)
 
 ### Features and functions currently supported
 Following features are currently implemented.
@@ -31,9 +41,6 @@ Following features are currently implemented.
 * Search for one-liner description and webpage link (for more info) of a dataset
 * Download datasets based on their size
 * Download datasets based on the machine learning task associated with them
-
-Here is a screenshot of the menu,
-![Menu](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/UCI_ML_SC_1.PNG)
 
 #### So, give it a try and put a star to my Github repo if you like it.
 
