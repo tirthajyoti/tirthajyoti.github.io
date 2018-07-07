@@ -23,4 +23,5 @@ Following features are currently implemented.
 * Download datasets based on the machine learning task associated with them
 
 Here is a screenshot of the execution window,
-<p align="center"><img width="400" height="350" src="https://imgur.com/lj2eTQQ"></p>
+
+<p align="center"><img width="300" height="300" src="https://github.com/tirthajyoti/tirthajyoti.github.io/blob/master/Images/UCI_ML_SC_1.PNG"></p>
