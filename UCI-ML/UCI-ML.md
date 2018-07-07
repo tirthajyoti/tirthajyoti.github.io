@@ -23,4 +23,4 @@ Following features are currently implemented.
 * Download datasets based on the machine learning task associated with them
 
 Here is a screenshot of the execution window,
-![Image 1](https://imgur.com/lj2eTQQ)
+<p align="center"><img width="400" height="350" src="https://imgur.com/lj2eTQQ"></p>
