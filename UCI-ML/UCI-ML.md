@@ -1,12 +1,18 @@
 
 ![Header](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/robo_with_ipad.jpg)
-# A simple API for working with University of Irvine (UCI) Machine Learning repository
+# A simple API for working with University of California, Irvine (UCI) Machine Learning repository
 
 ## Table of Contents
 1. [Introduction](#Introduction)
 2. [About Page of the repository](#About)
 3. [Navigating the portal can be challenging and time consuming](#Navigating)
 4. [Introducing UCIML Python code base](#UCIML)
+5. [Required packages/Dependencies](#Dependencies)
+6. [How to run it](#howtorun)
+7. [Features and functions currently supported](#features)
+8. [Example (search and download a particular dataset)](#example1)
+9. [Example (search for datasets with a particular keyword)](#example2)
+10. [If want to bypass the simple API and play with the low-level functions](#lowlevelfunctions)
 
 ### Introduction <a name="Introduction"></a>
 [UCI machine learning dataset repository](https://archive.ics.uci.edu/ml/index.php) is something of a legend in the field of machine learning pedagogy. It is a *'go-to-shop'* for beginners and advanced learners alike. This codebase is an attempt to present **a simple and intuitive API for UCI ML portal**, where users can easily **look up a dataset description, search for a particular dataset they are interested, and even download datasets categorized by size or machine learning task.**
@@ -22,13 +28,13 @@ UCI ML portal is a wonderful gift to ML practioners. That said, navigating the p
 ### Introducing UCIML Python code base<a name="UCIML"></a>
 This is a MIT-licensed Open-source Python 3.6 codebase which offers functions and methods to allow an user play with the UCI ML datasets in an interactive manner. Download/clone/fork the codebase from my **[Github page here](https://github.com/tirthajyoti/UCI-ML-API)**.
 
-### Required packages/Dependencies
+### Required packages/Dependencies<a name="Dependencies"></a>
 Only three widely used Python packages are required to run this code. For easy installation of these supporting packages, setup.bash and setup.bat files are included in my repo. Just execute them in your Linux/Windows shell and you are ready!
 * [Pandas](https://pandas.pydata.org/)
 * [Beautifulsoup 4](https://www.crummy.com/software/BeautifulSoup/?)
 * [Requests](http://docs.python-requests.org/en/master/)
 
-### How to run it?
+### How to run it?<a name="howtorun"></a>
 Make sure you are connected to Internet:-) Then, just download/clone the Gitgub repo, make sure to have the supporting packages installed and run the following command at your terminal.
 
 **`python Main.py`**
@@ -38,7 +44,7 @@ Here is a screenshot of the menu,
 
 ![Menu](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/UCI_ML_SC_1.PNG)
 
-### Features and functions currently supported
+### Features and functions currently supported<a name="features"></a>
 Following features are currently implemented...
 * Building a local database of name, description, and URL of datasets by crawling the entire portal
 * Building a local database of name, size, machine learning task of datasets by crawling the entire portal
@@ -50,17 +56,17 @@ Following features are currently implemented...
 * Download datasets based on their size
 * Download datasets based on the machine learning task associated with them
 
-### Example (search and download a particular dataset)
+### Example (search and download a particular dataset)<a name="example1"></a>
 For example if you want to download the famous dataset Iris, just choose the option 3 from the menu, enter the name of the local database stored (to make the search faster) and voila! You will have the Iris dataset downloaded and stored in a folder called 'Iris' in your directory!
 
 ![Iris download example](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/Iris_download.PNG)
 
-### Example (search with a particular keyword)
+### Example (search for datasets with a particular keyword)<a name="example2"></a>
 If you search using a keyword by choosing option 7, then you will get back short one-liner abstracts about all the datasets whose name match your search string (even partially). You will also get the associated web page link for each of these results, so that you can go and explore them more if you want. Below screenshot shows an example of searching with the term **`Cancer`**.
 
 ![Search example with a keyword](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/Search_example.PNG)
 
-### If want to bypass the simple API and play with the low-level functions
+### If want to bypass the simple API and play with the low-level functions<a name="lowlevelfunctions"></a>
 In case you want to bypass the simple user API and play with the low-level functions, you are welcome to do so. Here is the rundown on them. First, import the necessary packages,
 ```
 from UCI_ML_Functions import *
