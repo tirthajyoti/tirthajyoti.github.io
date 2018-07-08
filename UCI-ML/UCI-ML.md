@@ -81,6 +81,45 @@ import pandas as pd
 * `local_database`: Name of the database (CSV file) stored locally i.e. in the same directory, which contains information about all the datasets on UCI ML repo.
 * `msg_flag`: Controls verbosity.
 
+**`describe_all_dataset(msg_flag=False)`**: Calls the `build_dataset_dictionary` function and prints description of all datasets from that.
+
+**`print_all_datasets_names(msg_flag=False)`**: Calls the `build_dataset_dictionary` function and prints names of all datasets from that.
+
+**`extract_url_dataset(dataset,msg_flag=False)`**: Given a dataset identifier this function extracts the URL for the page where the actual raw data resides.
+
+**`download_dataset_url(url,directory,msg_flag=False,download_flag=True)`**: Download all the files from the links in the given url.
+* `msg_flag`: Controls verbosity.
+* `download_flag`: Default is True. If set to False, only creates the directories but does not initiate download (for testing purpose).
+
+**`download_datasets(num=10,local_database=None,msg_flag=True,download_flag=True)`**: Downloads datasets and puts them in a local directory named after the dataset. By default downloads first 10 datasets only. User can choose the number of dataets to be downloaded.
+* `msg_flag`: Controls verbosity.
+* `download_flag`: Default is True. If set to False, only creates the directories but does not initiate download (for testing purpose).
+
+**`download_dataset_name(name,local_database=None,msg_flag=True,download_flag=True)`**: Downloads a particular dataset by searching the given name.
+* `local_database`: Name of the database (CSV file) stored locally i.e. in the same directory, which contains information about all the datasets on UCI ML repo.
+* `msg_flag`: Controls verbosity.
+* `download_flag`: Default is True. If set to False, only creates the directories but does not initiate download (for testing purpose).
+
+**`download_datasets_size(size='Small',local_database=None,local_table=None,msg_flag=False,download_flag=True)`**: Downloads all datasets which satisfy the 'size' criteria.
+* `size`: Size of the dataset which user wants to download. Could be any of the following: 'Small', 'Medium', 'Large','Extra Large'.
+* `local_database`: Name of the database (CSV file) stored locally i.e. in the same directory, which contains name and URL information about all the datasets on UCI ML repo.
+* `local_table`: Name of the database (CSV file) stored locally i.e. in the same directory, which contains features information about all the datasets on UCI ML repo i.e. number of samples, type of machine learning task to be performed with the dataset.
+* `msg_flag`: Controls verbosity.
+* `download_flag`: Default is True. If set to False, only creates the directories but does not initiate download (for testing purpose).
+
+**`download_datasets_task(task='Classification',local_database=None,local_table=None,msg_flag=False,download_flag=True)`**: Downloads all datasets which match the ML task criteria as eneterd by the user.
+* `task`: Machine learning task for which user wants to download the datasets. Could be any of the following: 
+> 'Classification', 
+> 'Recommender Systems', 
+> 'Regression', 
+> 'Other/Unknown', 
+> 'Clustering', 
+> 'Causal Discovery'.
+* `local_database`: Name of the database (CSV file) stored locally i.e. in the same directory, which contains name and URL information about all the datasets on UCI ML repo.
+* `local_table`: Name of the database (CSV file) stored locally i.e. in the same directory, which contains features information about all the datasets on UCI ML repo i.e. number of samples, type of machine learning task to be performed with the dataset.
+* `msg_flag`: Controls verbosity.
+* `download_flag`: Default is True. If set to False, only creates the directories but does not initiate download (for testing purpose).
+
 #### So, give it a try and put a star to my [Github repo](https://github.com/tirthajyoti/UCI-ML-API) if you like it.
 
 Feedbacks and suggestions for improvements are most welcome at [tirthajyoti@gmail.com](mailto:tirthajyoti@gmail.com)
