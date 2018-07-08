@@ -53,7 +53,7 @@ If you search using a keyword by choosing option 7, then you will get back short
 ![Search example with a keyword](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/Search_example.PNG)
 
 ### If want to bypass the simple API and play with the low-level functions
-In case you want to bypass the simple user API and play with the low-level functions, you are welcome to do so. Here is the rundown on them,
+In case you want to bypass the simple user API and play with the low-level functions, you are welcome to do so. Here is the rundown on them. First, import the necessary packages,
 ```
 from UCI_ML_Functions import *
 import pandas as pd
@@ -62,6 +62,11 @@ import pandas as pd
 `read_dataset_table()`: Reads the table of datasets from the url: "https://archive.ics.uci.edu/ml/datasets.html" and process it further to clean and categorize.
 
 `clean_dataset_table()`: Accepts the raw dataset table (a DataFrame object) and returns a cleaned up version removing entries with unknown number of samples and attributes. Also rationalizes the 'Default task' category column indicating the main machine learning task associated with the datasets.
+
+`build_local_table(filename=None,msg_flag=True)`: Reads through the UCI ML portal and builds a local table with information such as name, size, ML task, data type. 
+> filename: Optional filename that can be chosen by the user. If not chosen, a default name ('UCI table.csv') will be selected by the program.
+
+> msg_flag: Controls verbosity.
 
 #### So, give it a try and put a star to my [Github repo](https://github.com/tirthajyoti/UCI-ML-API) if you like it.
 
