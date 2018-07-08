@@ -64,13 +64,14 @@ import pandas as pd
 `clean_dataset_table()`: Accepts the raw dataset table (a DataFrame object) and returns a cleaned up version removing entries with unknown number of samples and attributes. Also rationalizes the 'Default task' category column indicating the main machine learning task associated with the datasets.
 
 `build_local_table(filename=None,msg_flag=True)`: Reads through the UCI ML portal and builds a local table with information such as name, size, ML task, data type. 
-> filename: Optional filename that can be chosen by the user. If not chosen, a default name ('UCI table.csv') will be selected by the program.
+* `filename`: Optional filename that can be chosen by the user. If not chosen, a default name ('UCI table.csv') will be selected by the program.
+* `msg_flag`: Controls verbosity.
 
-> msg_flag: Controls verbosity.
-
-`build_dataset_list(url='https://archive.ics.uci.edu/ml/datasets',msg_flag=True)`: Scrapes through the UCI ML datasets page and builds a list of all datasets.
+`build_dataset_list()`: Scrapes through the UCI ML datasets page and builds a list of all datasets.
 
 `build_dataset_dictionary()`: Scrapes through the UCI ML datasets page and builds a dictionary of all datasets with names and description. Also stores the unique identifier corresponding to the dataset. This identifier string is needed by the downloader function to download the data file. Generic name won't work.
+
+`build_full_dataframe()`: Builds a DataFrame with all information together including the url link for downloading the data.
 
 #### So, give it a try and put a star to my [Github repo](https://github.com/tirthajyoti/UCI-ML-API) if you like it.
 
