@@ -1,56 +1,127 @@
-<h1>Welcome!</h1>
-<h2>Hi, this is Tirthajyoti's Github project pages</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<h2><i>A bit of introduction about myself</i></h2>
-<p>
-My name is Tirthajyoti Sarkar. I am a semiconductor technologist with 14+ years of experience in power electronics, semiconductor technology development, and product innovation. In particular, I specialize in the design and development of <a href="https://en.wikipedia.org/wiki/Power_MOSFET">Trench Power MOSFET</a> technology and products for high-performance <a href="https://en.wikipedia.org/wiki/Power_electronics">power electronics systems</a>.
-</p>
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
 
-<p> 
-<b>I am currently focused on applying data analytics/machine learning to technology and product design.</b>
-</p>
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
 
-<p>
-I work as a Senior Principal Engineer at <a href="http://www.onsemi.com">ON Semiconductor</a>. 
-<br>I have a Ph.D. in EE from the <a href="http://www.ece.uic.edu">Department of Electrical and Computer Engineering</a> at the <a href="http://www.uic.edu"> University of Illinois at Chicago</a> and a B.Tech in Instrumentation Engineering from the <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology (IIT), Kharagpur.</a>
-<br>Here is my <a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/">LinkedIn profile.</a>
-<br>I was elevated to the grade of Senior Member of IEEE for my contributions towards power electronics in 2015.
-<br>I have (co)authored more than 25 peer-reviewed Transaction and Conference papers, 2 monographs/book chapters, and 4 U.S. Patents.
-<br>I serve on the technical program committee as Track/Topic chair in many IEEE conferences.
-</p>
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
 
-<p><br></p>
+.row {
+    margin: 8px -16px;
+}
 
-<h2><i>My experience with data analytics/machine learning</i></h2>
-<p><span style=color:blue><font size="4">My transition from a 'user' of tools to a programmer</font></span>
-<p>
-<b>Throughout my career, I have worked with complex, high-volume, and high-dimensional scientific and engineering data.</b> I have extracted and analyzed large datasets, created advanced visualizations, and presented insights to my technical teams. But in all those endeavors, I was largely dependent on a fixed set of tools and was never exposed to the true power of underlying mechanics of data analysis.
-</p>
-<p>However, since last 2 years, I have become keenly interested in the tools and algorithms which work under the hood and this has opened up a world of possibilities for me. I have discovered the joy of not depending on enterprise tools and writing my own functions and codes in languages such as Python or R. This has given me a much broader perspective and much sharper insights into any data related problem. I have actively started contributing to open-source communities by sharing my analytics projects on Github and social forums. In parallel, I have started learning about core algorithms and how they solve the range of analysis and machine learning problems. I am appreciating the whole process deeply and feeling empowered to peel back the layers. <b>Today, I am able to think about a data problem from multiple viewpoints and analyze/model/learm from it with high degree scientific rigor using custom code and algorithms.</b></p>
-</p>
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
 
-<p><span style=color:blue><font size="4">Continuing education in data analytics and machine learning</font></span>
-<p>I have audited multitude of courses on statistics, algorithms, machine learning, and analytics on online platforms such as Coursera and edX. Some of the prominent ones are listed here</p>
-<li><i>“Artificial Intelligence: An Introduction To Neural Networks And Deep Learning”</i>, Stanford Continuing Studies, Stanford University (on-campus)</li>
-<li><i>“Data Science: Data to Insights”</i>, Massachusetts Institute of Technology, MIT Professional Program</li>
-<li><i>Machine Learning</i> (Coursera - Stanford University)</li>
-<li><i>Data Science MicroMasters program</i> (edX - UC San Diego)</li>
-<li><i>Deep Learning specialization</i> (Coursera - deeplearning.ai)</li>
-<li><i>Machine Learning with Case Studies Approach</i> (Coursera – University of Washington)</li>
-<li><i>Algorithm Design and Analysis</i> (edX – Penn State University)</li>
-<li><i>Artificial Intelligence</i> (edX – Columbia University)</li>
-<li><i>Bayesian statistics - Techniques and Models</i> (Coursera – UC Santa Cruz)</li>
-<br>
-Apart from these, I am registered to start a <a href="http://www.gatech.edu/academics/degrees/masters/analytics-online-degree-oms-analytics"><b>Masters of Science (MS)Degree in Analytics</a></b> (specializing in <a href="https://pe.gatech.edu/master-science-degrees/analytics/program-information/computational-data-analytics-track">Computational Data Analytics)</a> from Georgia Tech this Fall (August 2018).
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
 
-</p>
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-<p><span style=color:blue><font size="4">Consultancy with a AI-based startup</font></span>
-<p>
-Follwoing my passion about AI/ML/data science, in my spare time, I work with a AI-driven starup in Palo Alto, CA as a Consulting Scientist. My responsibility is to advise on <b><i>generative models for software test scripts and test data</b></i>, and work with the Natural Language Processing (NLP) team to <b><i>discover hidden patterns in the test scripts of various web-based applications with the eventual goal of automating the testing process</i></b> to the largest extent possible. I intend to apply <b><i>statistical modeling techniques</b></i> (such as <a href="https://brilliant.org/wiki/gaussian-mixture-model/">Gaussian mixture-models</a>, frequency counters, topic modeling, <a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf">variational autoencoder</a>, etc.) along with <b><i>text-mining algorithms</b></i> to generate synthetic test scripts and then process them through a <b><i>deep learning model</b></i> to obtain highly accurate automatic test case synthesis from minimal seed data set.</p>
-</p>
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
 
-<h3><a href="https://tirthajyoti.github.io/Writings.html">I write regularly on data science/machine learning topics and my personal projects</a>
-<h3>I maintain an actibe <a href="https://github.com/tirthajyoti">Github repository</a> of my projects. See <a href="https://tirthajyoti.github.io/GithubProjects.html">this page for description</a>.
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
 
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
 
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Tirthajyoti's Home Page</h1>
+<hr>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/work1.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p> I have been a semiconductor technologist for 14+ years of working in the field of power electronics, semiconductor technology development, and product innovation. In particular, I specialize in the design and development of <a href="https://en.wikipedia.org/wiki/Power_MOSFET">Trench Power MOSFET</a> technology and products for high-performance <a href="https://en.wikipedia.org/wiki/Power_electronics">power electronics systems</a></p><a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/"> Click here to see my LinkedIn profile</a>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/Analytics-1.jpeg" alt="Lights" style="width:100%">
+      <h3>Analytics and Machine Learning</h3>
+      <p>I am currently focused on applying data analytics and machine learning to technology and product design.</p>
+<p>I use <b>Python, R, MATLAB, and JMP (SAS analytics tool)</b> for my data science and machine learning work. I have published 3 Python packages on data analytics and machine learning and maintain an active Github repo on various personal projects.</p>
+<p>I also consult for an AI-driven startup in Palo Alto, CA in the area of <b><i>generative model and NLP-based automated test case synthesis.</i></b></p> <a href="https://tirthajyoti.github.io/MyWork.html"> Click here to know more </a>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/ML-1.jpg" style="width:100%">
+      <h3>My Open-source contributions and Github Projects</h3>
+      <p>I maintain an actibe <a href="https://github.com/tirthajyoti">Github repository</a> of my projects spanning topics of	  
+	  <li style=color:Blue>general data analytics,</li> 
+	  <li style=color:Blue>algorithms,</li> 
+	  <li style=color:Blue>machine learning,</li>
+	  <li style=color:Blue>deep learning,</li> 
+	  <li style=color:Blue>generative models,</li>
+	  <li style=color:Blue>text-mining and web-scraping, etc.</li></p>See <a href="https://tirthajyoti.github.io/GithubProjects.html">this page for description</a>.
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/writing-1.jpg" alt="Mountains" style="width:100%">
+      <h3>My Articles and Writings</h3>
+      <p>I write regularly on data science and machine learning topics on various platforms such as "Towards Data Science", "FreeCodeCamp", "Experfy", and "Heartbeat.ai".</p> <a href="https://tirthajyoti.github.io/Writings.html"> Click here to see a full list of the articles </a>.
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+</body>
+</html>
