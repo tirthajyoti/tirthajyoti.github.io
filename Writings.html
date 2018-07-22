@@ -1,24 +1,174 @@
-<h2><i>My writings on data science/machine learning</i></h2>
-<span style=color:blue><font size="4">Articles for "Towards Data Science"</font></span>
-<br>
-Here are some of the articles I wrote for "Towards Data Science" platform.<br><br>
-<li> <a href="https://towardsdatascience.com/design-your-engineering-experiment-plan-with-a-simple-python-command-35a6ba52fa35">Create your experimental design with a simple Python command</a></li>
-<li> <a href="https://towardsdatascience.com/why-you-should-start-using-npy-file-more-often-df2a13cc0161">Why you should start using .npy file more often…</a></li>
-<li> <a href="https://towardsdatascience.com/introducing-pydbgen-a-random-dataframe-database-table-generator-b5c7bdc84be5">Introducing pydbgen: A random dataframe/database table generator</a></li>
-<li> <a href="https://towardsdatascience.com/data-analytics-with-python-by-web-scraping-illustration-with-cia-world-factbook-abbdaa687a84">Data Analytics with Python by web scraping: Illustration with CIA World Factbook</a></li>
-<li> <a href="https://towardsdatascience.com/step-by-step-guide-to-build-your-own-mini-imdb-database-fc39af27d21b">Step-by-step guide to build your own ‘mini IMDB’ database</a></li>
-<li> <a href="https://towardsdatascience.com/some-useful-advice-and-q-a-for-machine-learning-data-science-starters-part-i-54f8abd531d5">Essential beginners’ Q/A for machine learning/data science</a></li>
-<li> <a href="https://towardsdatascience.com/interactive-machine-learning-make-python-lively-again-a96aec7e1627">Interactive Machine Learning: Make Python ‘Lively’ Again</a></li>
-<li> <a href="https://towardsdatascience.com/a-very-simple-demo-of-interactive-controls-on-jupyter-notebook-4429cf46aabd">A very simple demo of interactive controls on Jupyter notebook</a></li>
-<li> <a href="https://towardsdatascience.com/machine-learning-with-python-easy-and-robust-method-to-fit-nonlinear-data-19e8a1ddbd49">Machine Learning with Python: Easy and robust method to fit nonlinear data</a></li>
-<li> <a href="https://towardsdatascience.com/data-science-with-python-turn-your-conditional-loops-to-numpy-vectors-9484ff9c622e">Data science with Python: Turn your conditional loops to Numpy vectors</a></li>
-<li> <a href="https://towardsdatascience.com/why-you-should-forget-for-loop-for-data-science-code-and-embrace-vectorization-696632622d5f">Why you should forget ‘for-loop’ for data science code and embrace vectorization</a></li>
-<li> <a href="https://towardsdatascience.com/when-machine-learning-tries-to-predict-the-performance-of-machine-learning-6cc6a11bb9bf">When Machine Learning tries to predict the performance of Machine Learning…</a></li>
-<li> <a href="https://towardsdatascience.com/how-to-choose-effective-moocs-for-machine-learning-and-data-science-8681700ed83f">15 minute guide to choose effective courses for machine learning and data science</a></li>
-<br>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<span style=color:blue><font size="4">Articles for "Heartbeat (Fritz.ai)"</font></span>
-<br>
-Here are some of the articles I wrote for "Hreatbeat-Fritz.ai" platform.<br><br>
-<li> <a href="https://heartbeat.fritz.ai/some-essential-hacks-and-tricks-for-machine-learning-with-python-5478bc6593f2">Some Essential Hacks and Tricks for Machine Learning with Python</a></li>
-<li> <a href="https://heartbeat.fritz.ai/transfer-learning-how-it-may-help-to-enable-ai-on-every-smartphone-de696f019e36">Transfer learning: Can it help enable AI on every smartphone?</a></li>
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row1 {
+    margin: 8px -16px;
+}
+
+.row2 {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row1,
+.row1 > .column1 {
+    padding: 8px;
+}
+
+.row2,
+.row2 > .column2 {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 25%;
+}
+
+.column2 {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row1:after { 
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Clear floats after rows */ 
+.row2:after { 
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<h2 style="font-size:36px">Data Science and Machine Learning Articles</h2>
+<hr>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row1">
+  <div class="column1">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/Design_of_Experiment.jpeg" alt="Mountains" style="width:100%">
+      <h3>Create your experimental design with a simple Python command</h3>
+	  <p>Design of Experiment (DOE) is an important activity for any scientist, engineer, or statistician planning to conduct experimental analysis. This article discusses a new open-source Python package which can create key designs (factorial, randomized, response-surface, etc.) from a simple input CSV file. </p>
+      <a href="https://towardsdatascience.com/design-your-engineering-experiment-plan-with-a-simple-python-command-35a6ba52fa35"> Click here to read the article</a>
+    </div>
+  </div>
+  
+  <div class="column1">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/NPY_file.png" alt="Mountains" style="width:100%">
+      <h3>Why you should start using .npy file more often…</h3>
+      <p>Data science needs fast computation and transformation of data. Native NumPy objects in Python provides that advantage over regular programming objects. It works for as simple a task as reading numeric data set from a file on the disk. We demonstrate the advantage with few lines of code.</p> <a href="https://towardsdatascience.com/why-you-should-start-using-npy-file-more-often-df2a13cc0161">Click here to read the article</a>
+    </div>
+  </div>
+  
+  <div class="column1">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/UCI-ML.jpeg" alt="Mountains" style="width:100%">
+      <h3>Introducing a simple and intuitive Python API for UCI machine learning repository</h3>
+      <p>Introducing a simple and intuitive API for UCI machine learning portal, where users can easily look up a data set description, search for a particular data set they are interested, and even download datasets categorized by size or machine learning task.</p> <a href="https://towardsdatascience.com/introducing-a-simple-and-intuitive-python-api-for-uci-machine-learning-repository-fd2ce8eb6cd4">Click here to read the article</a>.
+    </div>
+  </div>
+  
+  <div class="column1">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/SVM-sorting.png" alt="Mountains" style="width:100%">
+      <h3>How the good old sorting algorithm helps a great machine learning technique</h3>
+      <p>In this article, we showed that how the simple sorting algorithm is at the heart of solving an important problem in computational geometry and how that relates to a widely used machine learning technique.</p> <a href="https://towardsdatascience.com/how-the-good-old-sorting-algorithm-helps-a-great-machine-learning-technique-9e744020254b"> Click here to read the article</a>.
+    </div>
+  </div>
+ </div>
+ 
+ <div class="row2"> 
+  <div class="column2">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/PythonML1.png" alt="Mountains" style="width:100%">
+      <h3>Some Essential Hacks and Tricks for Machine Learning with Python</h3>
+      <p>In this article, we discuss some cool tricks and tips about machine learning with Python. Some key online MOOC courses and blogs are mentioned. Most essential machine learning libraries (NumPy, Matplotlib, Seaborn, Pandas, Scikit-Learn, Statsmodels, TensorFlow, etc.) and their features are mentioned.</p> <a href="https://heartbeat.fritz.ai/some-essential-hacks-and-tricks-for-machine-learning-with-python-5478bc6593f2"> Click here to read the article </a>.
+    </div>
+  </div>
+  
+  <div class="column2">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/pydbgen1.jpeg" alt="Mountains" style="width:100%">
+      <h3>Introducing pydbgen: A random dataframe/database table generator</h3>
+      <p>Often, beginners in SQL or data science struggle with the matter of easy access to a large sample database file (.DB or .sqlite) for practicing SQL commands. Would it not be great to have a simple tool or library to generate a large database with multiple tables, filled with data of one’s own choice?
+</p> <a href="https://towardsdatascience.com/introducing-pydbgen-a-random-dataframe-database-table-generator-b5c7bdc84be5"> Click here to read the article</a>.
+    </div>
+  </div>
+  
+  <div class="column2">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/CIA-factbook.png" alt="Mountains" style="width:100%">
+      <h3>Data Analytics with Python by Web scraping: Illustration with CIA World Factbook</h3>
+      <p>In this article, we show how to use Python libraries (URLlib, BeautifulSoup4, etc.), Regex programming, and HTML parsing to extract useful information from a website and answer some important analytics questions afterwards.</p> <a href="https://towardsdatascience.com/data-analytics-with-python-by-web-scraping-illustration-with-cia-world-factbook-abbdaa687a84"> Click here to read the article </a>.
+    </div>
+  </div>
+  
+  <div class="column2">
+    <div class="content">
+    <img src="https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Images/Mini-IMDB.png" alt="Mountains" style="width:100%">
+      <h3>Step-by-step guide to build your own ‘mini IMDB’ database</h3>
+      <p> In this article, I will show how to use simple Python libraries and built-in capabilities to scrape the web for movie information and store them in a local SQLite database, which can later be queried for data analytics with movie info. Think of this as a project to build your own mini IMDB database!</p><a href="https://towardsdatascience.com/step-by-step-guide-to-build-your-own-mini-imdb-database-fc39af27d21b"> Click here to read the article</a>.
+    </div>
+  </div>
+</div>
+
+<!-- END MAIN -->
+</div>
+
+</body>
+</html>
