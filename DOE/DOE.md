@@ -50,13 +50,19 @@ Please note that as installed, PyDOE will throw some error related to type conve
 * If you encounter any error, you could try to modify the PyDOE code by going to the folder where pyDOE files are copied and copying the two files `doe_factorial.py` and `doe_box_behnken.py` supplied with this repo.
 
 ### How to use it?
-Note this is just a code repository and not a installer package. For the time being, please clone [this repo from GitHub](https://github.com/tirthajyoti/Design-of-experiment-Python), store all the files in a local directory and start using the software by simply typing,
+Note this is just a code repository and not a installer package. For the time being, please clone [this repo from GitHub](https://github.com/tirthajyoti/Design-of-experiment-Python), store all the files in a local directory.
 
-``python Main.py``
+**``git clone https://github.com/tirthajyoti/Design-of-experiment-Python.git``**
 
-After this, a simple menu will be printed on the screen and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables). **You should use the supplied generic CSV file as an example.** Please put the factors in the columns and the levels in the row (not the other way around).
+Then start using the software by simply typing,
 
-Also, **you must have an input parameters CSV file stored in the same directory** that you are running this code from. Couple of example CSV files are provided in the repo. Feel free to modify them as per your needs.
+**``python Main.py``**
+
+After this, a simple menu will be printed on the screen and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables).
+
+<p align="center"><img width="400" height="350" src="https://raw.githubusercontent.com/tirthajyoti/Design-of-experiment-Python/master/SC-1.PNG"></p>
+
+**You must have an input parameters CSV file stored in the same directory** that you are running this code from. You should use the supplied generic CSV file as an example. Please put the factors in the columns and the levels in the row (not the other way around). Couple of example CSV files are provided in the repo. Feel free to modify them as per your needs.
 
 ### Is an installer/Python library available?
 At this time, **No**. I plan to work on turning this into a full-fledged Python library which can be installed from PyPi repository by a PIP command. But I cannot promise any timeline for that :-) ***If somebody wants to collaborate and work on an installer, please feel free to do so.***
