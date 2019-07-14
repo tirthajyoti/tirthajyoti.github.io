@@ -3,7 +3,8 @@ body { margin: 60px auto; width: 70%; }
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
 
-p, ul { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em; line-height: 1.3em; color: #333; }
+p { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em; line-height: 1.3em; color: #333; }
+ul { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em; line-height: 1.5em; color: #333; }
 
 h1, h2, h3, h4 { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 3em;  }
@@ -17,7 +18,8 @@ nav ul li, footer ul li { display: inline; margin-right: 20px; }
 footer { border-top: 1px solid #d5d5d5; font-size: 1.0em; }
 
 pagelinks { border-top: 1px solid #d5d5d5; font-size: 1.4em; line-height: 1.4em}
-projheading {border-top: 2px solid #d5d5d5;border-bottom: 2px solid #d5d5d5;font-size: 1.4em; line-height: 1.4em;font-weight: bold; color: black}
+projheading {border-top: 2px solid #d5d5d5;border-bottom: 2px solid #d5d5d5;font-size: 1.3em; line-height: 1.7em;font-weight: bold; color: black}
+projdoclink {color:red;font-size: 1.4em;font-weight:bold}
 
 /* Blog */
 ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
