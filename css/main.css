@@ -4,7 +4,8 @@ a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
 
 p { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em; line-height: 1.3em; color: #333; }
-ul { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em; line-height: 1.5em; color: #333; }
+p.badges { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.0em; line-height: 1.0em;}
+ul { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.3em; line-height: 1.5em; color: #333; }
 
 h1, h2, h3, h4 { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 3em;  }
