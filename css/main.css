@@ -7,6 +7,9 @@ p { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.4em;
 p.badges { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.0em; line-height: 1.0em;}
 ul { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; font-size: 1.3em; line-height: 1.5em; color: #333; }
 
+code {font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 1.2em;background-color: #ecf0f3; color: #222;}
+
 h1, h2, h3, h4 { font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 3em;  }
 h2 { font-size: 2.2em; }
