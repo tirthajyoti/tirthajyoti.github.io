@@ -5,7 +5,7 @@
 
 
 ### Note
-This article was originally published on **Medium**, [here](https://towardsdatascience.com/https-medium-com-tirthajyoti-build-pipelines-with-pandas-using-pdpipe-cade6128cd31?). Also published on **KDNuggets** [here](https://www.kdnuggets.com/2019/12/build-pipelines-pandas-pdpipe.html). Many thanks to the creator of the package, [Shay Palachy]([https://github.com/shaypal5](https://github.com/shaypal5)) for featuring this on social media platforms and adding new features to the package based on my work.
+This article was originally published on **Medium**, [here](https://towardsdatascience.com/https-medium-com-tirthajyoti-build-pipelines-with-pandas-using-pdpipe-cade6128cd31?). Also published on **KDNuggets** [here](https://www.kdnuggets.com/2019/12/build-pipelines-pandas-pdpipe.html). Many thanks to the creator of the package, [Shay Palachy](http://www.shaypalachy.com/) for featuring this on social media platforms and adding new features to the package based on my work.
 
 ---
 
@@ -18,7 +18,7 @@ These tasks can, of course, be done with many single-step functions/methods that
 
 In the data science world, great examples of packages with pipeline features are — [dplyr in R language](https://dplyr.tidyverse.org/), and [Scikit-learn in the Python ecosystem](https://scikit-learn.org/stable/modules/compose.html).
 
-Pandas also offer a `.pipe` method which can be used for similar purposes with user-defined functions. However, in this article, we are going to discuss a wonderful little library called **`pdpipe`**, which specifically addresses this pipelining issue with Pandas DataFrame.
+Pandas also offer a `.pipe` method which can be used for similar purposes with user-defined functions. However, in this article, we are going to discuss a wonderful little library called [**`pdpipe`**](https://pdpipe.github.io/pdpipe/), which specifically addresses this pipelining issue with Pandas DataFrame.
 
 ## Pipelining with Pandas
 The example [Jupyter notebook can be found here in my Github repo](https://github.com/tirthajyoti/Machine-Learning-with-Python/blob/master/Pandas%20and%20Numpy/pdpipe-example.ipynb). Let’s see how we can build useful pipelines with this library.
@@ -54,7 +54,7 @@ We start with the simplest possible pipeline, consisting of just one operation (
 
 Let’s say the machine learning team and the domain experts say that they think we can safely ignore the  `Avg. Area House Age`  data for modeling. Therefore, we will drop this column from the dataset.
 
-For this task, we create a pipeline object `drop_age` with the `ColDrop` method from [**pdpipe**](https://github.com/shaypal5/pdpipe) and pass the DataFrame to this pipeline.
+For this task, we create a pipeline object `drop_age` with the `ColDrop` method from [**pdpipe**](https://pdpipe.github.io/pdpipe/) and pass the DataFrame to this pipeline.
 
     import pdpipe as pdp  
     drop_age = pdp.ColDrop(‘Avg. Area House Age’)  
@@ -65,7 +65,7 @@ The resulting DataFrame, as expected, looks like following,
 ![image-5](https://raw.githubusercontent.com/tirthajyoti/tirthajyoti.github.io/master/Notebooks/pdpipe-images/5.png)
 
 ### Chain stages of pipeline simply by adding
-Pipelines are useful and practical only when we are able to multiple stages. There are multiple methods by which you can do that in [**pdpipe**](https://github.com/shaypal5/pdpipe). However, the simplest and most intuitive approach is to use the + operator. It is like hand-joining to pipes!
+Pipelines are useful and practical only when we are able to multiple stages. There are multiple methods by which you can do that in [**pdpipe**](https://pdpipe.github.io/pdpipe/). However, the simplest and most intuitive approach is to use the + operator. It is like hand-joining to pipes!
 
 Let’s say, apart from dropping the age column, we also want to one-hot-encode the `House_size` column so that a classification or regression algorithm can be run on the dataset easily.
 
@@ -119,13 +119,13 @@ All of this — using the following five lines of code,
 
 ### Update on the latest version: Drop rows directly!
 
-I had a wonderful discussion with the author of the package  [Shay Palachy]([https://github.com/shaypal5](https://github.com/shaypal5))  and he let me know that the latest version of the **package can accomplish the dropping of row (satisfying a given condition) with one line of code** using a lambda function.
+I had a wonderful discussion with the author of the package  [Shay Palachy](http://www.shaypalachy.com/)  and he let me know that the latest version of the **package can accomplish the dropping of row (satisfying a given condition) with one line of code** using a lambda function.
 
     pdp.RowDrop({‘Price’: lambda x: x <= 250000})
 
 ## Scikit-learn and NLTK stages
 
-There are many more useful and intuitive DataFrame manipulation methods available for DataFrame manipulation. However, we just wanted to show that even some  operations  from Scikit-learn and NLTK package are included in  [**pdpipe**](https://github.com/shaypal5/pdpipe)  for making awesome pipelines.
+There are many more useful and intuitive DataFrame manipulation methods available for DataFrame manipulation. However, we just wanted to show that even some  operations  from Scikit-learn and NLTK package are included in  [**pdpipe**](https://pdpipe.github.io/pdpipe/)  for making awesome pipelines.
 
 ### Scaling estimator from Scikit-learn
 
@@ -174,9 +174,9 @@ If we summarize all the operations shown in this demo, it looks like the followi
 
 All of these operations may be used frequently on similar types of datasets and it will be wonderful to have a simple set of sequential code blocks to execute as a pre-processing operation before the dataset is ready for the next level of modeling.
 
-Pipelining is the key to achieve that uniform set of sequential code blocks. Pandas is the most widely used Python library for such data pre-processing tasks in a machine learning/data science team and [**pdpipe**](https://github.com/shaypal5/pdpipe) provides a simple yet powerful way to build pipelines with Pandas-type operations which can be directly applied to the Pandas DataFrame objects.
+Pipelining is the key to achieve that uniform set of sequential code blocks. Pandas is the most widely used Python library for such data pre-processing tasks in a machine learning/data science team and [**pdpipe**](https://pdpipe.github.io/pdpipe/) provides a simple yet powerful way to build pipelines with Pandas-type operations which can be directly applied to the Pandas DataFrame objects.
 
-[Explore this library on your own](https://github.com/shaypal5/pdpipe) and build more powerful pipelines for your specific data science task.
+[Explore this library on your own](https://pdpipe.github.io/pdpipe/) and build more powerful pipelines for your specific data science task.
 
 ---
 
