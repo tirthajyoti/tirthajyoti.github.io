@@ -1,4 +1,4 @@
-# Build pipelines with Pandas using “pdpipe”
+# Build pipelines with Pandas using [`pdpipe`](https://pdpipe.github.io/pdpipe/)
 ### We show how to build intuitive and useful pipelines with Pandas DataFrame using a wonderful little library called pdpipe.
 
 ## [Dr. Tirthajyoti Sarkar](https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/), Fremont, CA
