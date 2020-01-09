@@ -1,7 +1,7 @@
 
 <h1 align="center">Complex logic at breakneck speed: Try Julia for data science</h1>
 
-## Dr. Tirthajyoti Sarkar ([LinkedIn](https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/))
+<h2 align="center"> <a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/">Dr. Tirthajyoti Sarkar</a></h2>
 
 ![](https://cdn-images-1.medium.com/max/2560/1*BoIkAVSloc4lcxiR-0G8Rw.jpeg)
 
