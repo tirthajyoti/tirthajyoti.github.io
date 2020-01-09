@@ -142,7 +142,7 @@ Although in the case of straightforward functions, Numpy is on par with Julia in
 
 With many ongoing developments in the data science and machine learning support systems, Julia is one of the most exciting new languages to look forward to in the coming days. This is one tool, that budding data scientists should add to their repertoire.
 
-I am building a Github repo with Julia fundamentals and data science examples. [**Check it out here](https://github.com/tirthajyoti/Julia-data-science)**.
+I am building a Github repo with Julia fundamentals and data science examples. **[Check it out here](https://github.com/tirthajyoti/Julia-data-science)**.
 
 ## Additional reading
 
