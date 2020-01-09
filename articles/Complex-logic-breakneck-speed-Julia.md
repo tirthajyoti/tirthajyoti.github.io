@@ -1,6 +1,8 @@
 
 <h1 align="center">Complex logic at breakneck speed: Try Julia for data science</h1>
 
+## Dr. Tirthajyoti Sarkar ([LinkedIn](https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/))
+
 ![](https://cdn-images-1.medium.com/max/2560/1*BoIkAVSloc4lcxiR-0G8Rw.jpeg)
 
 NOTE: I am building a Github repo with Julia fundamentals and data science examples. **[Check it out here](https://github.com/tirthajyoti/Julia-data-science)**.
