@@ -97,9 +97,9 @@ So, that ran in **close to 4 milliseconds**. Certainly slower than just the blin
 
 Now, we certainly cannot compete with this speed with a Python for-loop! We know how that will turn out, don’t we? So, we have to use a Numpy vectorized code.
 
-But how do we check for odd numbers and only then sum them up in case of a Numpy array? Fortunately, we have the np.where() method.
+But how do we check for odd numbers and only then sum them up in case of a Numpy array? Fortunately, we have the `np.where()` method.
 
-Here is the Python code. Not that straightforward (unless you know how to use the np.where(correctly), is it?
+Here is the Python code. Not that straightforward (unless you know how to use the `np.where`(correctly), is it?
 
 ![](https://cdn-images-1.medium.com/max/2000/1*sUv0yIi6ywzudnOh8YLm_A.png)
 
@@ -113,7 +113,7 @@ Let’s say we have three arrays (say ***W***, ***X***, and ***B***) with random
 
 Does this logic look familiar to you? It is a variation on any densely connected neural network (or even a single perceptron), where the linear combination of weight, feature, and bias vector has to exceed a certain threshold to propagate to the next layer.
 
-So, here is the Julia code. Again, simple and sweet. Took ~**1.8 milliseconds**. Note, it uses a special function called muladd() which multiplies two numbers and adds to a third.
+So, here is the Julia code. Again, simple and sweet. Took ~**1.8 milliseconds**. Note, it uses a special function called `muladd()` which multiplies two numbers and adds to a third.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*9_-k-cOFfg_8mza6Ow3fYg.png)
 
