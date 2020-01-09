@@ -1,5 +1,5 @@
 
-## Complex logic at breakneck speed: Try Julia for data science
+# Complex logic at breakneck speed: Try Julia for data science
 
 ![](https://cdn-images-1.medium.com/max/2560/1*BoIkAVSloc4lcxiR-0G8Rw.jpeg)
 
