@@ -9,11 +9,11 @@ NOTE: I am building a Github repo with Julia fundamentals and data science examp
 
 *“Walks like Python, runs like C”* — this has been said about Julia, a modern programming language, **focused on scientific computing**, ****and having an ever-increasing base of followers and developers.
 
-Julia, a general-purpose programming language, is made specifically for scientific computing. It is a [**flexible](https://docs.julialang.org/en/v1/manual/types/) [dynamically-typed](https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b)** language with **performance comparable to traditional statically-typed languages**.
+Julia, a general-purpose programming language, is made specifically for scientific computing. It is a **[flexible](https://docs.julialang.org/en/v1/manual/types/)** and **[dynamically-typed](https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b)** language with **performance comparable to traditional statically-typed languages**.
 
 Julia tries to provide a single environment productive enough for prototyping and efficient for industrial-grade applications. It is a multi-paradigm language encompassing both [functional](https://codeburst.io/a-beginner-friendly-intro-to-functional-programming-4f69aa109569) and object-oriented programming components, although the **majority of the users like its functional programming aspects**.
 
-The inception of this programming language can be traced back to 2009. The lead developers Alan Edelman, Jeff Bezanson, Stefan Karpinski, and Viral Shah started working on creating a language that can be used for better and faster numerical computing. The developers were able to launch a commercial release in February 2012.
+The inception of this programming language can be traced back to 2009. The lead developers **Alan Edelman, Jeff Bezanson, Stefan Karpinski, and Viral Shah** started working on creating a language that can be used for better and faster numerical computing. The developers were able to launch a commercial release in February 2012.
 
 ## Why is it awesome for data science?
 
@@ -45,7 +45,7 @@ The official Julia language portal has some data about it, although the benchmar
 
 In fact, the question almost always assumes that one is talking about the comparison between Julia and some kind of optimized/vectorized Python code (like used by Numpy functions). Otherwise, native Julia is almost always faster than Python because of compiled code execution, and [native Python is way slower than Numpy-type execution](https://towardsdatascience.com/why-you-should-forget-for-loop-for-data-science-code-and-embrace-vectorization-696632622d5f).
 
-Numpy is seriously fast. It is a library with super-optimized functions (many of them pre-compiled), with a dedicated focus of giving Python users (particularly useful for data scientists and ML engineers) near-C speed. Simple Numpy functions like sum or standard deviation [can match or beat equivalent Julia implementations closely (particularly for large input array size](https://github.com/kbarbary/website/blob/master/posts/julia-vs-numpy-arrays.rst)).
+**Numpy is seriously fast**. It is a library with super-optimized functions (many of them pre-compiled), with a dedicated focus of giving Python users (particularly useful for data scientists and ML engineers) near-C speed. Simple Numpy functions like sum or standard deviation [can match or beat equivalent Julia implementations closely (particularly for large input array size](https://github.com/kbarbary/website/blob/master/posts/julia-vs-numpy-arrays.rst)).
 
 However, to take full advantage of Numpy functions, you have to think in terms of vectorizing your code. And it is not easy at all to write complex logic in a program in the form vectorized code all the time.
 
@@ -67,11 +67,9 @@ Python code is below. We kept the same functional nature of the code (Julia is a
 
 ### But how does a Julia array compare to Numpy array?
 
-In the code above, we created an array variable. This is the most useful data structure in Julia for data science as it can be directly used for statistical computation or linear algebra operations, right out of the box.
+In the code above, we created an **`array`** variable. This is the **[most useful data structure in Julia for data science](https://docs.julialang.org/en/v1/base/arrays/)** as it can be directly used for statistical computation or linear algebra operations, right out of the box. No need for a separate library or anything. Julia arrays are order-of-magnitude faster than Python lists.
 
-No need for a separate library or anything. Julia arrays are order-of-magnitude faster than Python lists.
-
-But, Numpy arrays are fast and let’s benchmark the same summing operation.
+But, Numpy arrays are also super-fast and let’s benchmark the same summing operation.
 
 Julia code below using the sum() function on the array. It takes ~**451 usec** (faster than the for-loop approach but only half the time).
 
@@ -95,9 +93,7 @@ For Julia, the code change will be fairly straightforward. We will just use the 
 
 So, that ran in **close to 4 milliseconds**. Certainly slower than just the blind sum (using the for loop) but not too much (the for-loop plain sum too ~1.1 milliseconds).
 
-Now, we certainly cannot compete with this speed with a Python for-loop! We know how that will turn out, don’t we? So, we have to use a Numpy vectorized code.
-
-But how do we check for odd numbers and only then sum them up in case of a Numpy array? Fortunately, we have the `np.where()` method.
+Now, we certainly cannot compete with this speed with a Python for-loop! We know how that will turn out, don’t we? So, we have to use a Numpy vectorized code. But how do we check for odd numbers and only then sum them up in case of a Numpy array? Fortunately, we have the `np.where()` method.
 
 Here is the Python code. Not that straightforward (unless you know how to use the `np.where`(correctly), is it?
 
@@ -109,7 +105,7 @@ Julia code was simpler and ran faster!
 
 ### Another slightly complicated operation
 
-Let’s say we have three arrays (say ***W***, ***X***, and ***B***) with random floating-point numbers ranging from -2 to 2 and we want to compute a special quantity: product of two of these arrays, added to the third i.e. ***A***.***X***+***B*** but the quantity will be added to the final sum only if the element-wise linear combination exceeds zero***.***
+Let’s say we have three arrays (say **`A`**,**`X`**, and **`B`**) with random floating-point numbers ranging from -2 to 2 and we want to compute a special quantity: product of two of these arrays, added to the third i.e. **`AX`+`B`** but the quantity will be added to the final sum only if the element-wise linear combination exceeds zero
 
 Does this logic look familiar to you? It is a variation on any densely connected neural network (or even a single perceptron), where the linear combination of weight, feature, and bias vector has to exceed a certain threshold to propagate to the next layer.
 
