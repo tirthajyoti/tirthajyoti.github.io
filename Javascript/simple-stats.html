@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>Test program for simple-statistics JavaScript library</title>
+<style type="text/css">
+body {margin: 30px; background: cyan}
+
+.button {
+  border: none;
+  background-color:green;
+  color:wheat;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: italic;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+#numElements {
+    margin: 1px;
+    font-size: 24px;
+}
+
+#inputarea {
+    margin: 1px;
+    font-size: 24px;
+}
+
+.statimage{
+    width:22%;
+    float: left;
+    border-style: solid;
+    border-width:thick;
+}
+
+.result{
+    width:72%;
+    margin-left: 2%;
+    float: left;
+}
+
+</style> 
+</head>
+<script src="../js/simple-stats.js"></script>
+<body>
+<h1>Simple summary stats with JavaScript</h1>
+<h2>Dr. Tirthajyoti Sarkar (<a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/">My LinkedIn</a>, 
+    <a href="https://tirthajyoti.github.io">My GitHub Page</a>)</h2>
+
+<hr width="100%">
+
+<p id="inputarea">Input array (enter a list of numbers separated by commas):</p>
+<br><input type="text" id="array" size="60"/>
+<input type="button" class="button" onClick="clearInput()" Value="Clear the input" />
+<input type="button" class="button" onClick="genRandom()" Value="Generate 10 random numbers!" />
+<br>
+<input type="button" class="button" width="48" onClick="summaryCalc()" Value="Compute summary stats" />
+
+<hr width="100%">
+
+<div class="statimage"><img src="https://cdn.pixabay.com/photo/2016/06/13/15/07/presentation-1454403_1280.png" 
+    height="200px" width="250px"></div>
+<div class="result">
+<p id="numElements"> </p>    
+<p>The max is : 
+    <span id = "max"></span>
+</p>
+<p>The min is : 
+    <span id = "min"></span>
+</p>
+<p>The sum is : 
+<span id = "sum"></span>
+</p>
+<p>The mean is : 
+<span id = "mean"></span>
+</p>
+<p>The std. dev is : 
+<span id = "stdDev"></span>
+</p>
+</div>
+</body>
+</html>
