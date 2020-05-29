@@ -1,8 +1,34 @@
+// Simple summar stats computation
+// Dr. Tirthajyoti Sarkar, Fremont, CA (May 2020)
+
+// Select all buttons by their common class and extract individual button objects 
+const allBttns = document.querySelectorAll(".bttn")
+const clearBttn = allBttns[0]
+const randBttn = allBttns[1]
+const computeBttn = allBttns[2]
+
+const inputArea = document.querySelector("#array")
+
+inputArea.addEventListener('keypress',function(e){
+    if (e.key==='Enter'){
+        summaryCalc();
+    };
+});
+
+// Clear button event listener
+clearBttn.addEventListener('click',clearInput)
+// Random number generation button event listener
+randBttn.addEventListener('click',genRandom)
+// Compute summary stat button event listener
+computeBttn.addEventListener('click',summaryCalc)
+
+// Function to clear input
 function clearInput()
 {
     document.getElementById("array").value = "";
 };
 
+// Function to generate random numbers
 function genRandom(){
     let randomArray = []
     for (let i=0; i<10; i++){
@@ -11,9 +37,10 @@ function genRandom(){
     document.getElementById("array").value = randomArray.toString();
 }
 
+// Function to compute summary stats
 function summaryCalc()
 {
-    var array = document.getElementById("array");
+    let array = document.getElementById("array");
     array2 = array.value.split(",").map(function (item) {
     return parseFloat(item, 3);
 });
