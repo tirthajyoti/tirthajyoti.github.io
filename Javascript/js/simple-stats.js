@@ -1,4 +1,5 @@
 // Simple summar stats computation
+// With a simple D3.js applet to draw a bar chart
 // Dr. Tirthajyoti Sarkar, Fremont, CA (May 2020)
 
 // Select all buttons by their common class and extract individual button objects 
@@ -89,4 +90,50 @@ getSD = function (data) {
     stdDev = getSD(array2);
     document.getElementById("stdDev").innerHTML = '<strong>'+stdDev.toFixed(3)+'</strong>';
 }
-}
+
+//Width and height
+var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labels
+var rightMargin = 10; // Space to the right of last bar
+var margin = {left: leftMargin, right: rightMargin, top: 10, bottom: 10};
+let w = margin.left + 500 + margin.right;
+let h = 100;
+let barPadding = 5;
+
+d3.select("svg").remove();
+
+let newDiv = document.createElement("div")
+newDiv.classList.add('barchart');
+document.body.appendChild(newDiv)
+let svg = d3.select(".barchart")
+.append("svg")
+.attr("width", w)
+.attr("height", h+100);
+
+let yScale = d3.scaleLinear()
+                     .domain([0, d3.max(array2)])
+                     .range([0, h]);
+
+let yAxisScale = d3.scaleLinear()
+                    .domain([d3.min(array2), d3.max(array2)])
+                    .range([h - yScale(d3.min(array2)), 0 ]);
+
+svg.selectAll("rect")
+    .data(array2)
+    .enter()
+    .append("rect")
+    .attr("x", function(d, i) {
+        return i * (w /array2.length);  //Bar width of 20 plus 1 for padding
+        })
+    .attr("y", function(d, i) { return h - Math.max(0, yScale(d));})
+    .attr("width", w / array2.length - barPadding)
+    .attr("height", function(d) {
+            return Math.abs(yScale(d));
+        });
+    
+var yAxis = d3.axisLeft(yAxisScale);
+svg.append('g')
+        .call(yAxis);
+    //.attr('transform', function(d) {
+        //return 'translate(' + margin.left + ', -20)';
+   // })
+    }
