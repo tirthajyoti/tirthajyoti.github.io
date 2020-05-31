@@ -20,7 +20,7 @@ body {margin: 30px; background: cyan}
 
 #numElements {
     margin: 1px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #inputarea {
@@ -29,22 +29,28 @@ body {margin: 30px; background: cyan}
 }
 
 .statimage{
-    width:22%;
+    width: 28%;
     float: left;
     border-style: solid;
     border-width:thick;
 }
 
 .result{
-    width:72%;
+    width: 22%;
     margin-left: 2%;
     float: left;
+}
+
+.barchart{
+    margin-left: 2%;
+    margin-top: 5%;
 }
 
 nav ul, footer ul { font-size: 1.2em; font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
 nav ul li, footer ul li { display: inline; margin-right: 20px; }
 
-</style> 
+</style>
+<script type="text/javascript" src="http://d3js.org/d3.v4.js"></script>
 </head>
 <body>
     <nav>
@@ -62,17 +68,20 @@ nav ul li, footer ul li { display: inline; margin-right: 20px; }
 
 <hr width="100%">
 
-<p id="inputarea">Input array (enter a list of numbers separated by commas):</p>
-<br><input type="text" id="array" placeholder="Enter numbers here" size="60"/>
-<input type="button" class="bttn" Value="Clear the input" />
-<input type="button" class="bttn" Value="Generate 10 random numbers!" />
+<div class="Input-area" height="300px">
+    <p id="inputarea">Input array (enter a list of numbers separated by commas):</p>
+    <br><input type="text" id="array" placeholder="Enter numbers here" size="60"/>
+    <input type="button" class="bttn" Value="Clear the input" />
+    <input type="button" class="bttn" Value="Generate 10 random numbers!" />
 <br>
 <input type="button" class="bttn" width="48" Value="Compute summary stats" / autofocus>
-
+</div>
 <hr width="100%">
 
-<div class="statimage"><img src="https://cdn.pixabay.com/photo/2016/06/13/15/07/presentation-1454403_1280.png" 
-    height="200px" width="250px"></div>
+<div class="statimage">
+    <img src="https://cdn.pixabay.com/photo/2016/06/13/15/07/presentation-1454403_1280.png" 
+    height="200px" width="250px">
+</div>
 <div class="result">
 <p id="numElements"> </p>    
 <p>The max is : 
