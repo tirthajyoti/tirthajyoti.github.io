@@ -1,5 +1,9 @@
 // Simple summar stats computation
 // With a simple D3.js applet to draw a bar chart
+// The bar-chart code is based on,
+// https://alignedleft.com/tutorials/d3/making-a-bar-chart
+// and
+// https://bl.ocks.org/gurjeet/83189e2931d053187eab52887a870c5e
 // Dr. Tirthajyoti Sarkar, Fremont, CA (May 2020)
 
 // Select all buttons by their common class and extract individual button objects 
@@ -96,7 +100,7 @@ var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labe
 var rightMargin = 10; // Space to the right of last bar
 var margin = {left: leftMargin, right: rightMargin, top: 10, bottom: 10};
 let w = margin.left + 500 + margin.right;
-let h = 100;
+let h = 200;
 let barPadding = 5;
 
 d3.select("svg").remove();
@@ -107,7 +111,7 @@ document.body.appendChild(newDiv)
 let svg = d3.select(".barchart")
 .append("svg")
 .attr("width", w)
-.attr("height", h+100);
+.attr("height", h+200);
 
 let yScale = d3.scaleLinear()
                      .domain([0, d3.max(array2)])
@@ -128,7 +132,27 @@ svg.selectAll("rect")
     .attr("width", w / array2.length - barPadding)
     .attr("height", function(d) {
             return Math.abs(yScale(d));
-        });
+        })
+    .attr("fill", function(d) {
+        return "rgb(0, 0, " + Math.abs(parseInt(d * 2.5)) + ")";
+        })
+    
+        svg.selectAll("text")
+        .data(array2)
+        .enter()
+        .append("text")
+        .text(function(d) {
+        return d;
+       })
+       .attr("x", function(d, i) {
+        return i * (w /array2.length)+(w /array2.length - barPadding)/2 +5;  //Bar width of 20 plus 1 for padding
+        })
+    .attr("y", function(d, i) { return h - Math.max(0, yScale(d))+15;})
+    .attr("text-anchor", "middle")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "white");
+
     
 var yAxis = d3.axisLeft(yAxisScale);
 svg.append('g')
