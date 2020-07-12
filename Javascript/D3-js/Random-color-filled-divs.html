@@ -1,0 +1,144 @@
+<title>A D3.js example of generating random colored bars</title>
+<head>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <style>
+        .top {
+            border: solid 2px blue;
+            margin: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .code {
+            font-family: monospace;
+            background-color: lightgray;
+            font-weight: 400;
+            font-size: 14;
+        }
+
+        #header-p {
+            font-size: 18;
+        }
+
+        .mainBttn {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            }
+    </style>
+</head>
+<body>
+  <h1>A simple visual element generation example with D3.js</a></h1>
+  
+  <div class="top">
+      <p>
+      D3.js is a wonderful JavaScript <a href="https://d3js.org/">visualization library</a>. 
+      In this simple example, however, we are generating some 
+      <b>color-filled bars of random widths</b> by using the following methods from D3, 
+    </p>
+      <ul>
+          <i><b>
+              <li>selection</li> 
+              <li>attribute setting</li>
+              <li>style setting</li>
+              <li>append</li>
+              <li>remove</li>
+            </b></i>
+        </ul>
+    <p>We even invoke a function through D3 by setting the 
+      <span class="code">onclick</span> attribute of a button, 
+      which itself, is appened (and deleted) to (from) the DOM by another D3 method.
+    </p>
+    </div>
+  
+  <p id="header-p">
+      Click on the button below to generate some random color filled bars!
+  </p>
+  
+  <button class ="mainBttn" onclick="addBar()">Click here for fun</button>
+  
+  <div class="bar-container">
+  </div>
+  
+    <script type="text/javascript">
+    var numBars = 0
+
+    function addBar()
+    {
+        
+        // Generate a random number for adding
+        var num = 10*(20+Math.floor(51*Math.random()))
+        var numPx = num.toString()+"px"
+        var randColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6)
+
+        // Add an div element
+        d3.select(".bar-container")
+        .append("div")
+        .attr("class","bars")
+        .style("width",numPx)
+        .style("background-color",randColor)
+        .style("height","25px")
+        .style("margin-top","10px")
+        .style("margin-bottom","10px")
+        
+        // Increment the count of the items
+        numBars+=1
+
+        if (numBars===1)
+        {
+            d3.select("#header-p")
+            .text("We have a single bar so far")
+            .style("background-color","#CCDDEE")
+        } 
+        else 
+        {
+            d3.select("#header-p")
+            .text("We have " + numBars + " bars now")
+            .style("background-color","#CCDDEE")
+        }
+      
+        /* 
+        Selecting the 'Clean up' button by first selecting the div class 
+        and then selecting the button tag. No special class or id 
+        is used for this 'Clean up' button.
+        */
+        d3.select(".bar-container")
+        .select("button")
+        .remove()
+
+        /* 
+        Add the 'Clean up' button.
+        Note it also sets the attribute `onclick` to `cleanUp()` function.
+        */
+        d3.select(".bar-container")
+        .append("button")
+        .text("Clean up the bars")
+        .attr("onclick","cleanUp()")
+    }
+
+    function cleanUp()
+    {
+        // Remove the whole ul element
+        d3.selectAll(".bars")
+        .remove()
+        
+        // Remove the clean up button
+        d3.select(".bar-container")
+        .select("button")
+        .remove()
+
+        // Change the top text
+        d3.select("#header-p")
+        .text("Bars cleaned up! Click on the button below to add again.")
+        .style("background-color","#FFFFFF")
+        
+        // Reset number of items added and the sum total
+        numBars = 0
+    }
+    </script>
+  </body>

@@ -1,0 +1,188 @@
+<title>A D3.js example of adding list items from a data file</title>
+<head>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <style>
+        .top {
+            border: solid 2px blue;
+            margin: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .code {
+            font-family: monospace;
+            background-color: lightgray;
+            font-weight: 400;
+            font-size: 14;
+        }
+
+        #header-p {
+            font-size: 18;
+        }
+    </style>
+</head>
+<body>
+  <h1>A simple data loading example with d3.js</a></h1>
+  
+  <div class="top">
+      <p>
+      D3.js is a wonderful JavaScript <a href="https://d3js.org/">visualization library</a>. 
+      In this simple example, however, we are <b>not doing any visualization</b> but only 
+      demonstrating the use of certain methods from D3, 
+      involved in the following actions related to the DOM elements, </p>
+      <ul>
+          <i><b>
+              <li>data loading (from a CSV file)</li>
+              <li>selection</li> 
+              <li>attribute setting</li>
+              <li>style setting</li>
+              <li>append</li>
+              <li>remove</li>
+            </b></i>
+        </ul>
+    <p>We even invoke a function through D3 by setting the 
+      <span class="code">onclick</span> attribute of a button, 
+      which itself, is appened (and deleted) to (from) the DOM by another D3 method.
+    </p>
+    </div>  
+    <p>
+        Click on the button below to load data from a (local) file - <span class="code">data-1.csv</span>
+    </p>
+    <p id="loadData">
+        <button id = "dataLoadBttn" onclick="readData()">Click to load the data from a CSV file</button>
+    </p>
+  
+  <p id="header-p">
+      Click on the button below to add data to the list.
+  </p>
+ 
+  <button id = "mainBttn" onclick="addListItem()">Click to add an item to the list</button>
+  <div class="items">
+    
+  </div>
+  
+    <script type="text/javascript">
+    // Variables
+    var numItems = 0
+    var listTotal = 0
+    var numList = []
+    var readingDone = false
+    var bttnText = "Click to add an item to the list";
+
+    // readData(numList);
+    
+    // Data loading function
+    function readData()
+    {
+        {
+            numList = []
+
+            data = d3.csv("data-1.csv", function(data) 
+            {
+            for (var i = 0; i < data.length; i++) 
+            {
+                numList.push(parseFloat(data[i].num))
+            }
+            });
+            readingDone = true
+        }
+
+        /*
+        d3.select("#loadData")
+        .append("p")
+        .text("Loading finished. The file had " + numList.length + " data points")
+        */
+    }
+
+    // Add list item function
+    function addListItem()
+    {
+        // Check if the data loading is done
+        if (readingDone!== true){
+            alert("Please load the data first!")
+            return;
+        }
+
+        // Increment the count of the items
+        numItems+=1
+
+        if (numItems > numList.length){
+            //alert("The file only had " + numList.length + " data points!")
+            d3.select("#mainBttn")
+            .text("The file only had " + numList.length + " data points!. Use the 'Clean up' button below")
+            return;
+        }      
+        var num = numList[numItems-1]
+        
+        // Add an ul element
+        d3.select(".items")
+        .append("ul")
+        .attr("id","the-list")
+
+        // Add a li element to the ul with the random number
+        d3.select("#the-list")
+        .append("li")
+        .text("Number "+ numItems + " from the data file: " + num)
+
+        // Update the sum total of the list
+        listTotal+=num
+
+        if (numItems===1)
+        {
+            d3.select("#header-p")
+            .text("Now the list has a single element. The sum total is: " + listTotal)
+            .style("background-color","#CCDDEE")
+        } 
+        else 
+        {
+            d3.select("#header-p")
+            .text("Now the list has " + numItems + " elements. The sum total is: " + listTotal)
+            .style("background-color","#CCDDEE")
+        }
+        
+        /* 
+        Selecting the 'Clean up' button by first selecting the div class 
+        and then selecting the button tag. No special class or id 
+        is used for this 'Clean up' button.
+        */
+        d3.select(".items")
+        .select("button")
+        .remove()
+
+        /* 
+        Add the 'Clean up' button.
+        Note it also sets the attribute `onclick` to `cleanUp()` function.
+        */
+        d3.select(".items")
+        .append("button")
+        .text("Clean up the list")
+        .attr("onclick","cleanUp()")
+    }
+
+    // Reset (clean up) function
+    function cleanUp()
+    {
+        // Remove the whole ul element
+        d3.select("#the-list")
+        .remove()
+        
+        // Remove the clean up button
+        d3.select(".items")
+        .select("button")
+        .remove()
+
+        // Change the top text
+        d3.select("#header-p")
+        .text("List cleaned up! Click on the button below to add again.")
+        .style("background-color","#FFFFFF")
+
+        // Reset the main button text
+        d3.select("#mainBttn")
+        .text(bttnText)
+
+        // Reset number of items added and the sum total
+        numItems = 0
+        listTotal = 0
+    }
+    </script>
+  </body>
