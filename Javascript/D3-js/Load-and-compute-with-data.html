@@ -17,13 +17,33 @@
 
         #header-p {
             font-size: 18;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
         }
 
         .container {
             padding-left: 100px;
             padding-right: 100px;
         }
+
+        button {
+            width: 200px;
+            height: 30px;
+            font-size: 16px;
+        }
     </style>
+
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-i77n{background-color:#f8a102;border-color:inherit;font-family:"Comic Sans MS", cursive, sans-serif !important;;
+        font-size:16px;text-align:center;vertical-align:top}
+        .tg .tg-kb93{background-color:#fffc9e;border-color:inherit;font-family:"Comic Sans MS", cursive, sans-serif !important;;
+        font-weight:bold;text-align:center;vertical-align:top}
+    </style>
+
 </head>
 <body>
 <div class="container">
@@ -36,14 +56,45 @@
       In this simple example, however, we are <b>not doing any visualization</b> but only 
       demonstrating the use of D3 for <b>data-loading</b> and <b>computing basic statistics</b>.
       <br><br>
-      We are loading the data from a CSV file hosted in a <a href=https://raw.githubusercontent.com/tirthajyoti/D3.js-examples/master/data/data-1.csv>Github repo</a>.  
-      
+      We are loading the data from a CSV file hosted in a 
+      <a href=https://raw.githubusercontent.com/tirthajyoti/D3.js-examples/master/data/data-1.csv>Github repo</a>.
+      Here is the table of the data.
+      <br><br>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-i77n">index</th>
+            <th class="tg-kb93">1</th>
+            <th class="tg-kb93">2</th>
+            <th class="tg-kb93">3</th>
+            <th class="tg-kb93">4</th>
+            <th class="tg-kb93">5</th>
+            <th class="tg-kb93">6</th>
+            <th class="tg-kb93">7</th>
+            <th class="tg-kb93">8</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-i77n">num</td>
+            <td class="tg-kb93">-4.5</td>
+            <td class="tg-kb93">15.8</td>
+            <td class="tg-kb93">12</td>
+            <td class="tg-kb93">8.2</td>
+            <td class="tg-kb93">-21.2</td>
+            <td class="tg-kb93">9.9</td>
+            <td class="tg-kb93">23.5</td>
+            <td class="tg-kb93">-18.2</td>
+          </tr>
+        </tbody>
+        </table>
+
     </div>  
     <p>
-        Click on the button below to load data from a file.
+        Click on the button below to load data from a CSV file, hosted on a Github repo.
     </p>
     <p id="loadData">
-        <button id = "dataLoadBttn" onclick="readData()">Click to load the data from a CSV file</button>
+        <button id = "dataLoadBttn" onclick="readData()">Load the data</button>
     </p>
     <p id="loadDataStatus">
     </p>
@@ -52,7 +103,7 @@
       Click on the button below to compute basic stats.
   </p>
  
-  <button id = "mainBttn" onclick="computeStats()">Click to compute stats...</button>
+  <button id = "mainBttn" onclick="computeStats()">Compute stats...</button>
   <div class="items">
   </div>
 </div>
@@ -90,6 +141,16 @@
         {
             numList.push(parseFloat(data[i].num))
         }
+
+        d3.select("#loadDataStatus")
+            .style("background-color", "orange")
+            .text("Loading...(this artificial delay is just for fun, of course!)")
+        
+        setTimeout(printLoadStatus, 2000);
+    }
+
+    function printLoadStatus()
+    {
         // Print a loading finished message
         d3.select("#loadDataStatus")
             .style("background-color", "lightgreen")

@@ -19,10 +19,29 @@
         #header-p {
             font-size: 18;
         }
+
+        button {
+            width: 500px;
+            height: 30px;
+            font-size: 16px;
+        }
     </style>
+
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-i77n{background-color:#f8a102;border-color:inherit;font-family:"Comic Sans MS", cursive, sans-serif !important;;
+        font-size:16px;text-align:center;vertical-align:top}
+        .tg .tg-kb93{background-color:#fffc9e;border-color:inherit;font-family:"Comic Sans MS", cursive, sans-serif !important;;
+        font-weight:bold;text-align:center;vertical-align:top}
+    </style>
+
 </head>
 <body>
-  <h1>A simple data loading example with d3.js</a></h1>
+  <h1>A simple data loading example with D3.js</a></h1>
   
   <div class="top">
       <p>
@@ -40,9 +59,36 @@
               <li>remove</li>
             </b></i>
         </ul>
-    <p>We even invoke a function through D3 by setting the 
-      <span class="code">onclick</span> attribute of a button, 
-      which itself, is appened (and deleted) to (from) the DOM by another D3 method.
+      Here is the data,
+      <br><br>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-i77n">index</th>
+            <th class="tg-kb93">1</th>
+            <th class="tg-kb93">2</th>
+            <th class="tg-kb93">3</th>
+            <th class="tg-kb93">4</th>
+            <th class="tg-kb93">5</th>
+            <th class="tg-kb93">6</th>
+            <th class="tg-kb93">7</th>
+            <th class="tg-kb93">8</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-i77n">num</td>
+            <td class="tg-kb93">-4.5</td>
+            <td class="tg-kb93">15.8</td>
+            <td class="tg-kb93">12</td>
+            <td class="tg-kb93">8.2</td>
+            <td class="tg-kb93">-21.2</td>
+            <td class="tg-kb93">9.9</td>
+            <td class="tg-kb93">23.5</td>
+            <td class="tg-kb93">-18.2</td>
+          </tr>
+        </tbody>
+        </table>
     </p>
     </div>  
     <p>
@@ -86,12 +132,6 @@
             });
             readingDone = true
         }
-
-        /*
-        d3.select("#loadData")
-        .append("p")
-        .text("Loading finished. The file had " + numList.length + " data points")
-        */
     }
 
     // Add list item function
@@ -130,13 +170,13 @@
         if (numItems===1)
         {
             d3.select("#header-p")
-            .text("Now the list has a single element. The sum total is: " + listTotal)
+            .text("Now the list has a single element. The sum total is: " + listTotal.toFixed(3))
             .style("background-color","#CCDDEE")
         } 
         else 
         {
             d3.select("#header-p")
-            .text("Now the list has " + numItems + " elements. The sum total is: " + listTotal)
+            .text("Now the list has " + numItems + " elements. The sum total is: " + listTotal.toFixed(3))
             .style("background-color","#CCDDEE")
         }
         

@@ -20,7 +20,7 @@
             font-size: 18;
         }
 
-        .mainBttn {
+        button {
             background-color: #4CAF50; /* Green */
             border: none;
             color: white;
@@ -50,9 +50,8 @@
               <li>remove</li>
             </b></i>
         </ul>
-    <p>We even invoke a function through D3 by setting the 
-      <span class="code">onclick</span> attribute of a button, 
-      which itself, is appened (and deleted) to (from) the DOM by another D3 method.
+    <p> Basically, we are showing how D3 methods can be used to <b>generate
+        DOM elements (on the fly) to visually encode information.</b>
     </p>
     </div>
   
@@ -76,7 +75,7 @@
         var numPx = num.toString()+"px"
         var randColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6)
 
-        // Add an div element
+        // Add a div element
         d3.select(".bar-container")
         .append("div")
         .attr("class","bars")
