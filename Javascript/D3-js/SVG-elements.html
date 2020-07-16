@@ -1,0 +1,104 @@
+<html>
+<title>A D3.js example of drawing various SVG elements</title>
+<head>
+    <script src="d3.v4.min.js"></script>
+<style>
+    #container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    hr {
+        height: 2px;
+        background-color:gray;
+    }
+
+    button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            }
+    
+    .input-text {
+        width: 40px;
+    }
+
+</style>
+</head>
+
+<body>
+<div id="container">
+    <h1>Example of SVG elements drawing with D3.js</a></h1>
+    <p>
+        In this demo, we are showing how to use D3.js to draw a few common SVG elements,
+        <ul>
+            <i><b>
+                <li>rectangles</li> 
+                <li>circles and ellipses</li>
+                <li>line (whose co-ordinates you can chose)</li>
+                <li>polygon</li>
+                <li>randomized data-driven path.</li>
+              </b></i>
+          </ul>
+    </p>
+    <hr>
+    
+    <button onclick="generateBox()">Draw a box</button>
+    <p></p>
+    <div id="box">
+    </div>
+    
+    <p></p><hr>
+    
+    <button onclick="generateCircles()">Draw a few circles</button>
+    <p></p>
+    <div id="circles">
+    </div>
+
+    <p></p><hr>
+
+    <button onclick="generateEllipses()">Draw overlapping ellipses</button>
+    <p></p>
+    <div id="ellipses">
+    </div>
+
+    <p></p><hr>
+
+    <button onclick="generatePolygons()">Draw a couple of polygons</button>
+    <p></p>
+    <div id="polygons">
+    </div>
+
+    <p></p><hr>
+
+    <button onclick="generateLine()">Draw a line</button> 
+    <br><br>(you can try various co-ordinates for the line but you have to reload the page each time)
+    <br><br>
+    Draw a line with these co-ordinates (Enter <i>x1, y1, x2, y2</i> four positive numbers).
+    <br><br>
+    x1 (20-100): <input id="line-x1" class="input-text" type="text">,
+    y1 (20-100): <input id="line-y1" class="input-text" type="text">,
+    x2 (100-300): <input id="line-x2" class="input-text" type="text">,
+    y2 (40-100): <input id="line-y2" class="input-text" type="text">
+    <p></p>
+    <div id="line">
+    </div>
+
+    <p></p><hr>
+
+    <button onclick="generatePath()">Draw a path</button>
+    <br><br>(The path is randomly generated but you have to reload the page each time you want to draw a new path)
+    <p></p>
+    <div id="path">
+    </div>
+</div>
+</body>
+</script>
+<script src="js/svg-elements.js"></script>
+</html>
