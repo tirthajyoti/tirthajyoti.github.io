@@ -1,0 +1,50 @@
+<html>
+<title>D3.js data binding</title>
+<head>
+    <script src="d3.v4.min.js"></script>
+<style>
+    #container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    hr {
+        height: 2px;
+        background-color:gray;
+    }
+
+    button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            }
+    
+    .input-text {
+        width: 40px;
+    }
+</style>
+</head>
+
+<body>
+<div id="container">
+        <h1>Example of D3.js data binding (bar chart)</a></h1>
+        <hr>
+    <p>
+        Click to generate some random data. How many do you want (between 5 and 20)?
+        <input id='nPts' class='input-text' type='text'>
+    </p>
+    <button onclick="genData()">Generate random data</button>
+    <div id="data-show"></div>
+    <p></p>
+    <button onclick="barchart()">Plot it!</button>
+    <p></p>
+    <div id="barchart-div"></div>
+</div>
+</body>
+<script src="js/data-binding.js"></script>
