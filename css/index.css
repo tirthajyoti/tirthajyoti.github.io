@@ -56,7 +56,7 @@
     padding-bottom: 5px;
     margin: 10px 0px 10px 0px;
 }
-/*
+
 a {
     text-decoration: none;
     color: #b04109;
@@ -66,7 +66,7 @@ a:hover {
     text-decoration: underline;
     font-weight: bold;
     color: blue;
- }*/
+ }
 
 .home-p1 {
     padding-top: 10px;
@@ -146,7 +146,7 @@ projdoclink {
     Font-awesome
     */
 
-    .fa {
+    .fa-footer {
       padding: 15px 20px 15px 20px;
       font-size: 32px;
       width: 75px;
@@ -156,7 +156,7 @@ projdoclink {
       border-radius: 30%;
     }
 
-    .fa:hover {
+    .fa-footer:hover {
         opacity: 0.7;
         text-decoration: none;
     }
