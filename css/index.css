@@ -11,9 +11,14 @@
  }
 
  .jumbotron {
-     padding:30px 30px 20px 30px;
+     padding: 50px 10px 10px 10px;
      margin:0px auto;
      }
+
+.jumbotron-footer {
+    padding:50px 30px 20px 30px;
+    margin:0px auto;
+    }
 
 .container-fluid {
        padding-top: 20px;
@@ -21,11 +26,11 @@
        }
 
 .container {
-        padding-top: 40px;
+        padding: 20px 10px 10px 0px;
     }
 
 .home-header {
-    padding-top: 40px;
+    padding: 20px 10px 0px 10px;
     }
 
 .bg-1 {
@@ -51,7 +56,7 @@
     padding-bottom: 5px;
     margin: 10px 0px 10px 0px;
 }
-
+/*
 a {
     text-decoration: none;
     color: #b04109;
@@ -61,7 +66,7 @@ a:hover {
     text-decoration: underline;
     font-weight: bold;
     color: blue;
- }
+ }*/
 
 .home-p1 {
     padding-top: 10px;
@@ -88,34 +93,6 @@ a:hover {
     font-family: 'Comic Sans MS';
     padding-bottom: 10px;
 }
-/*
-p.badges {
-    font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.0em;
-    line-height: 1.0em;
-}
-
-ul {
-    font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.1em;
-    line-height: 1.5em;
-    color: #333;
-}
-
-.code {
-    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-size: 1.2em;
-    background-color: #ecf0f3;
-    color: #222;
-}*/
-
-/*
-h1 {
-    font-size: 2.5em;
-    padding-bottom: 10px;
-    text-align: center;
-    border-bottom: 3px solid darkgray;
-}*/
 
 h2 {
     font-size: 2em;
@@ -125,16 +102,7 @@ h2 {
     padding-bottom: 10px;
 }
 
-/*nav ul, footer ul {
- font-size: 1.5em;
- font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif';
- padding: 2px;
- list-style: none;
- font-weight: bold;
- line-height: 2em;
- }*/
-
- .footer ul {
+.footer ul {
   font-family: 'Georgia','Helvetica', 'Arial', 'Sans-Serif';
   padding: 2px;
   list-style: none;
@@ -174,19 +142,66 @@ projdoclink {
     font-size: 1.4em;
     font-weight: bold;}
 
-/* Blog */
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em; }
+    /*
+    Font-awesome
+    */
 
-ul.posts li {
-    list-style: none;
-}
+    .fa {
+      padding: 15px 20px 15px 20px;
+      font-size: 32px;
+      width: 75px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 5px;
+      border-radius: 30%;
+    }
 
-/* CV */
-.cv { margin: 0px 0px 60px; }
-.cv h1 { font-size: 3em; }
-.cv h2 { font-size: 2em; }
-.cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-.cv address, .cv p { font-size: 1.2em; }
-.cv .download { float: right; font-size: .8em; text-transform: uppercase; }
+    .fa:hover {
+        opacity: 0.7;
+        text-decoration: none;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    .fa-pinterest {
+      background: #cb2027;
+      color: white;
+    }
+
+    .fa-medium {
+        background:black;
+        color:floralwhite;
+    }
+
+    .fa-github {
+        background:black;
+        color:floralwhite;
+    }
+
+    .fa-stack-overflow {
+        background: white;
+        color:orange;
+    }
