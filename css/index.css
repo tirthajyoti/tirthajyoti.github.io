@@ -205,3 +205,9 @@ projdoclink {
         background: white;
         color:orange;
     }
+
+    .copyright {
+        font-family: "Georgia";
+        font-size: 24px;
+        margin: 10px;
+    }
