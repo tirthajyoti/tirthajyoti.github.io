@@ -3,8 +3,7 @@
 <head>
 	<title>Tirthajyoti's Home Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
 	<!-- jQuery -->
@@ -24,11 +23,11 @@
 			<div class="collapse navbar-collapse" id="Navbar">
 				<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class = "nav-link" href="https://tirthajyoti.github.io"><span class='fa fa-home'></span> Home</a></li>
-				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/About.html"><span class='fa fa-info'> </span> About</a></li>
-				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/cv.pdf"><span class='fa fa-file-text'> </span> CV</a></li>
-				<li class="nav-item"><a class = "nav-link" href="https://medium.com/@tirthajyoti"><span class='fa fa-pencil'> </span> Articles</a></li>
-				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/GithubProjects.html"><span class='fa fa-cubes'> </span> Projects</a></li>
-				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/Notebooks.html"><span class='fa fa-code'> </span> DS/ML Notebooks and Code</a></li>
+				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/About.html" data-toggle="tooltip" data-html="true" title="<h5>Get to know me</h5>"><span class='fa fa-info'> </span> About</a></li>
+				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/cv.pdf" data-toggle="tooltip" data-html="true" title="<h5>CV in PDF format</h5>"><span class='fa fa-file-text'></span> CV</a></li>
+				<li class="nav-item"><a class = "nav-link" href="https://medium.com/@tirthajyoti" data-toggle="tooltip" data-html="true" title="<h5>Selected DS/ML articles from top publications</h5>"><span class='fa fa-pencil'> </span> Articles</a></li>
+				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/GithubProjects.html" data-toggle="tooltip" data-html="true" title="<h5>Open-source packages and other codebases</h5>"><span class='fa fa-cubes'> </span> Projects</a></li>
+				<li class="nav-item"><a class = "nav-link" href="https://tirthajyoti.github.io/Notebooks.html" data-toggle="tooltip" data-html="true" title="<h5>Most popular Jupyter notebooks!</h5>"><span class='fa fa-code'> </span> Notebooks and Code</a></li>
 				</ul>
 			</div>
 		</div>
@@ -86,5 +85,10 @@ deep learning, computer vision and image processing, math and statistics, synthe
 <p class="copyright text-center">
 &copy Dr. Tirthajyoti Sarkar, CA, USA, 2020
 </p>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+</script>
 </body>
 </html>
