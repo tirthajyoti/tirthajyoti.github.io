@@ -1,6 +1,6 @@
 body { 
     margin: 60px; 
-    width: 70%; }
+    }
 
 a { text-decoration: none; color: #5A5655; }
 a:hover { text-decoration: underline; }
