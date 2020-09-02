@@ -2,6 +2,10 @@ body {
     margin: 60px; 
     }
 
+.container { 
+    margin: 60px; 
+    }
+
 a { text-decoration: none; color: #5A5655; }
 a:hover { text-decoration: underline; }
 
