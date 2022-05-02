@@ -15,7 +15,8 @@
 	</py-env>
   </head>
 
-  <body style="margin: 25px;">
+  <body style="margin: 25px 75px 25px 75px;">
+	<div class="container-fluid">
 	<div class="p-5 text-center bg-light">
 		<h1 class="mb-3">Random number generation using PyScript</h1>
 		<p>Demo developed by <a href="https://www.linkedin.com/in/tirthajyoti-sarkar-2127aa7/">Dr. Tirthajyoti sarkar</a></p>
@@ -94,7 +95,8 @@ The importance of this <em>grabbing a HTML element directly from within the Pyth
 </select>
 <div>
 	<p style="margin-top:10px;">Adjust the number of random variates</p>
-	<input type="range" id="slider-num-var" value="500" min="100" max="1000" step="100" oninput="this.nextElementSibling.value = this.value" style="width:50%;">
+	<input type="range" id="slider-num-var" value="500" min="100" max="1000" step="100" 
+	oninput="this.nextElementSibling.value = this.value" style="width:50%;">
 	<output>500</output>
   </div>
 <div><button id="show-dist" style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-primary" pys-onClick="show_dist">
@@ -150,6 +152,7 @@ def show_dist(*ags, **kws):
 		ax1.set_title(f"Histogram of Exponential Distribution \nwith {dist_size} random variates",fontsize=11)
 		out2.write(fig1)
 </py-script>
+</div>
   </body>
   
 </html>
